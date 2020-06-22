@@ -10,5 +10,5 @@
       exceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
       return this.capitalize(string.split(' ').map(word => exceptions.includes(word) ? word : this.capitalize(word).join(' ')))
     }
-  
+
   }
