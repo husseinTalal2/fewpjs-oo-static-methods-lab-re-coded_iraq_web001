@@ -5,7 +5,7 @@
       return word[0].toUpperCase() + word.split("").slice(1).join("")
     }
     static sanitize(word){
-      return word.replace(/\W/g,"")
+      return word.replace(/[^'\w ]/g,"")
     }
     static titleize(str){
       return str.map(word => {
