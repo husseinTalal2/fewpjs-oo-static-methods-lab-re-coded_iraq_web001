@@ -8,7 +8,7 @@
     }
     static titleize(string){
       let exceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
-      return Formatter.capitalize(string.split(' ').map(word => exceptions.includes(word) ? word : Formatter.capitalize(word).join(' ')))
+      return (string.split(' ').map(word => exceptions.includes(word) ? word :word[0].toUpperCase() + word.split("").slice(1).join("") ))
     }
 
   }
